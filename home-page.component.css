@@ -1,0 +1,285 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:calibri;
+    background: Linear-gradient(120deg, rgb(249, 239, 248), rgb(243, 222, 243), rgb(249, 239, 248));
+    height: 100vh;
+    overflow:hidden;
+}
+.center {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    color:#adadad;
+    transform:translateY(-50%);
+    font: size 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #a15fb0;
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration:underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #a15fb0;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #daafeb;
+    transition: .5s;
+}
+.RegisterNow_link{
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.RegisterNow_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+.RegisterNow_link a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* ---------------------------from W3 docs------------------------------------------ */
+                        /* html, body {
+                        display:flex;
+                        justify-content: center;
+                        font-family: Roboto, Arial, sans-serif;
+                        font-size: 15px;
+                        }
+                        form {
+                        border: 5px solid #f1f1f1;
+                        }
+                        input[type=text], input[type=password] {
+                        width: 30%;
+                        padding: 16px 8px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        }
+                        button {
+                        background-color: #801a95cf;
+                        color: white;
+                        padding: 14px 0;
+                        margin: 10px 0;
+                        border: none;
+                        cursor: grabbing;
+                        width: 30%;
+                        }
+                        h1 {
+                        text-align:center;
+                        font-size:18;
+                        }
+                        button:hover {
+                        opacity: 0.8;
+                        }
+                        .formcontainer {
+                        text-align: center;
+                        margin: 24px 50px 12px;
+                        }
+                        .container {
+                        padding: 16px 0;
+                        text-align:center;
+                        }
+                        span.psw {
+                        float: right;
+                        padding-top: 0;
+                        padding-right: 15px;
+                        }
+                        /* Change styles for span on extra small screens */
+                       /* @media screen and (max-width: 300px) {
+                        span.psw {
+                        display: block;
+                        float: none;
+                        }
+                        } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mat-toolbar{
+    background-color: #fff;
+
+}
+.img-fluid{
+    width:175px;
+    height:auto;
+    margin: 24px 0 19px 10px!important;
+    display:inline;
+   
+}
+
+.page-container {
+    height: 100%;
+    background: #fafafa;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+    a {
+        color: inherit;
+        text-decoration:none;
+    }
+    header {
+        background: #fff;
+        color: #000;
+        padding: 24px 18px;
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+    .menu-button {
+            margin-right: 0px;
+            min-width: 0;
+            padding: 0;
+            line-height: normal;
+            color: #000;
+            display:flex;
+            justify-content:space-between;
+            outline: 2px dashed blue;
+            
+              
+
+    }
+    .app-title {
+            padding: 3 px;
+            text-align: right;
+            float: inline-end;
+        }
+      
+        navbar-collapse {
+            flex-basis: 100%;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .business-login-panel {
+            display: block;
+        }
+       .blink_me {
+            -webkit-animation: 1s linear blinker;
+            animation: 1s linear blinker;
+        }
+        
+        .float-container{
+            border: 3px solid #fff;
+            padding: 20px;
+            background-color:linear-gradient(221deg,#c62052 0,#280071) ;
+        }
+        .float-child {
+            width: 50%;
+            height:100%;
+            float: left;
+            padding: 20px;
+           
+            border: 2px;
+        }
+        .button-row {
+            display: table-cell;
+            width: 490px;
+          }
+          .section {
+            display: table;
+          }
+          .space{
+              display: inline-block;
+              width: 10px;
+              height:auto;
+          }
+          .mt-btn{
+           flex: 1;
+          }
+          
+          body{
+            background-image:linear-gradient(221deg,#280071 0,#c62052) ;
+            
+          }
+          .img-fluid-yn{
+            width:175px;
+            height:auto;
+            margin: 24px 0 19px 10px!important;
+            display:inline;
+            mix-blend-mode:lighten;
+        } */
